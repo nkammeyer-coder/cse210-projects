@@ -4,6 +4,42 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Exercise5 Project.");
+        DisplayWelcomeMessage();
+
+        string userName = ProvidedUserName();
+        int userNumber = ProvidedUserNumber();
+
+        int squaredNumber = SquaredNumber(userNumber);
+
+        DisplayResult(userName, squaredNumber);
+    }
+    static void DisplayWelcomeMessage()
+    {
+        Console.WriteLine("Welcome to the program!");
+    }
+    static string ProvidedUserName()
+    {
+        Console.Write("Please enter your name: ");
+        string name = Console.ReadLine();
+
+        return name;
+    }
+    static int ProvidedUserNumber()
+    {
+        Console.Write("Please provide your favorite number: ");
+        int number = int.Parse(Console.ReadLine());
+
+        return number;
+    }
+
+    static int SquaredNumber(int number)
+    {
+        int square = number * number;
+        return square;
+    }
+
+    static void DisplayResult(string name, int square)
+    {
+        Console.WriteLine($"{name}, the square of your number is {square}");
     }
 }
