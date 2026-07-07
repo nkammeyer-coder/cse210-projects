@@ -2,10 +2,10 @@ using System;
 
 public class Job
 {
-    public string _jobTitle = "Software Developer";
-    public string _company = "Apple";
-    public int _startYear = 2015;
-    public int _endYear = 2026;
+    public string _jobTitle;
+    public string _company;
+    public int _startYear;
+    public int _endYear;
     public void Display()
     {
         Console.WriteLine($"{_jobTitle} ({_company}) {_startYear} - {_endYear}");
