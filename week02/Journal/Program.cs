@@ -3,6 +3,10 @@ using System;
 class Program
 {
     static void Main(string[] args)
+
+    // Creativity - I exceeded the core requirements by recording the time
+    // in each journal entry was written in addition to the date.
+    // Furthermore, it was converted to 12 hour format.
     {
         Journal journal = new Journal();
         PromptGenerator promptGenerator = new PromptGenerator();
