@@ -20,6 +20,44 @@ class Program
             Console.Write("What would you like to do? ");
 
             choice = Console.ReadLine();
+
+            if (choice == "1")
+            {
+                string prompt = promptGenerator.GetRandomPrompt();
+
+                Console.WriteLine(prompt);
+                Console.Write("Press Enter when Done >>> ");
+
+                string response = Console.ReadLine();
+
+                Entry entry = new Entry();
+
+                entry._date = DateTime.Now.ToShortDateString();
+                entry._time = DateTime.Now.ToString("h:mm tt");
+                entry._promptText = prompt;
+                entry._userText = response;
+
+                journal.AddEntry(entry);
+            }
+            else if (choice == "2")
+            {
+                journal.DisplayAll();
+            }
+            else if (choice == "3")
+            {
+                Console.Write("What is the name of the file? ");
+                string fileName = Console.ReadLine();
+
+                journal.LoadFromFile(fileName);
+            }
+            else if (choice == "4")
+            {
+                Console.Write("What is the name of the file you are saving? ");
+                string fileName = Console.ReadLine();
+
+                journal.SaveToFile(fileName);
+            }
+
         }
     }
 }
