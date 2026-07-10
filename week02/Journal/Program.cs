@@ -6,7 +6,7 @@ class Program
 
     // Creativity - I exceeded the core requirements by recording the time
     // in each journal entry was written in addition to the date.
-    // Furthermore, it was converted to 12 hour format.
+    // Furthermore, it was converted to 12-hour format with AM/PM.
     {
         Journal journal = new Journal();
         PromptGenerator promptGenerator = new PromptGenerator();
