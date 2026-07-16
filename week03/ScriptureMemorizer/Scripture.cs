@@ -1,9 +1,20 @@
 using System;
-
-class Program
+using System.Collections.Generic;
+public class Scripture
 {
-    static void Main(string[] args)
+    private Reference _reference;
+    private List<Word> _words;
+
+    public Scripture(Reference reference, string text)
     {
-        Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
+        _reference = reference;
+        _words = new List<Word>();
+        string[] words = text.Split(' ');
+   
+        foreach (string wordText in words)
+        {
+            Word word = new Word(wordText);
+            _words.Add(word);
+        }
     }
 }
