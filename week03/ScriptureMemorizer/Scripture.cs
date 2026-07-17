@@ -17,4 +17,41 @@ public class Scripture
             _words.Add(word);
         }
     }
+    public void HideRandomWords(int numberToHide)
+    {
+        Random random = new Random();
+        int hiddenCount = 0;
+
+        while (hiddenCount < numberToHide && !IsCompletelyHidden())
+        {
+            int index = random.Next(_words.Count);
+
+            if (!_words[index].IsHidden())
+            {
+                _words[index].Hide();
+                hiddenCount++;
+            }
+        }
+    }
+    public string GetDisplayText()
+    {
+        string scriptureText = _reference.GetDisplayText() + "\n";
+
+        foreach (Word word in _words)
+        {
+            scriptureText += word.GetDisplayText() + " ";
+        }
+        return scriptureText.TrimEnd();
+    }
+    public bool IsCompletelyHidden()
+    {
+        foreach (Word word in _words)
+        {
+            if (!word.IsHidden())
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
