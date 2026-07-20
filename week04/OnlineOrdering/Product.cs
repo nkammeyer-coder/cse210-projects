@@ -1,4 +1,4 @@
-using System
+using System;
 
 public class Product
 {
@@ -18,5 +18,9 @@ public class Product
     public decimal GetTotalCost()
     {
         return _price * _quantity;
+    }
+    public string GetPackingLabel()
+    {
+        return $"{_name} \n Product ID: {_productId}";
     }
 }
