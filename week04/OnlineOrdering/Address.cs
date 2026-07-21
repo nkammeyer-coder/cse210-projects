@@ -1,4 +1,4 @@
-using System
+using System;
 
 public class Address
 {
@@ -20,6 +20,7 @@ public class Address
     _country = country;
     }
     
+    // creates a yes-or-no question to determine if they are in the USA.
     public bool IsInUSA()
     {
         return _country.ToUpper() == "USA";

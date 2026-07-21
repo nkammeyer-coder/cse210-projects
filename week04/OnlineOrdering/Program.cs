@@ -22,10 +22,10 @@ class Program
 
         // add products to order 1
         order1.AddProduct(
-            new Product("iMac", "cs1024", 1299.00m, 4)
+            new Product("iMac","cs1024", 1299.00m, 4)
         );
         order1.AddProduct(
-            new Product("Magic Mouse", "mm2", 79.00m, 4)
+            new Product("Magic Mouse","mm2", 79.00m, 4)
         );
         order1.AddProduct(
             new Product("Wireless Keyboard with Number Pad", "wwk2", 209.00m, 4)
@@ -46,14 +46,14 @@ class Program
         );
 
         // order 2
-        Order order2 = new Order(customer1);
+        Order order2 = new Order(customer2);
 
         // add products to order 2
         order2.AddProduct(
-            new Product("MacBook Air", "ma134", 899.00m, 7)
+            new Product("MacBook Air","ma134", 899.00m, 7)
         );
         order2.AddProduct(
-            new Product("MacBook Pro", "mp164", 2179.00m, 2)
+            new Product("MacBook Pro","mp164", 2179.00m, 2)
         );
 
         // display order 1

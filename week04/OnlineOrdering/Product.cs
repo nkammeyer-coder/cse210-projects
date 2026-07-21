@@ -21,6 +21,6 @@ public class Product
     }
     public string GetPackingLabel()
     {
-        return $"{_name} \n Product ID: {_productId}";
+        return $"{_name} - Product ID:{_productId}";
     }
 }

@@ -16,6 +16,6 @@ public class Customer
     }
     public string GetShippingLabel()
     {
-        return $"{_name} \n{_address.GetFullAddress}";
+        return $"{_name}\n{_address.GetFullAddress()}";
     }
 }
