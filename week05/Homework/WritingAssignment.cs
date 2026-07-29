@@ -8,7 +8,7 @@ class WritingAssignment : Assignment
     {
         _title = title;
     }
-    ppublic string GetWritingInformation()
+    public string GetWritingInformation()
     {
         string studentName = GetStudentName();
         return $"{_title} by {studentName}";
