@@ -36,11 +36,37 @@ public class Activity
 
         Console.WriteLine();
         Console.WriteLine("Get ready...");
+        ShowSpinner(5); // Showing spinner while the user "gets ready"
         }
+    public void ShowCountDown(int seconds)
+{
+    for (int i = seconds; i > 0; i--)
+    {
+        Console.Write(i);
+        Thread.Sleep(1000);
+
+        Console.Write("\b \b");
+    }
+}
     public int GetDuration()
     {
         return _duration;
     }    
+    protected void ShowSpinner(int seconds)
+{
+    string[] spinner = { "|", "/", "-", "\\" };
+
+    DateTime endTime = DateTime.Now.AddSeconds(seconds);
+
+    int i = 0;
+
+    while (DateTime.Now < endTime)
+    {
+        Console.Write(spinner[i % 4]);
+        Thread.Sleep(150);
+        Console.Write("\b \b");
+    }
+}
     public void DisplayEndMessage()
     {
         Console.WriteLine();
