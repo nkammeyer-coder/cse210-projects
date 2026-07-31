@@ -65,6 +65,7 @@ public class Activity
         Console.Write(spinner[i % 4]);
         Thread.Sleep(150);
         Console.Write("\b \b");
+        i++;
     }
 }
     public void DisplayEndMessage()
