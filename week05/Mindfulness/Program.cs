@@ -2,11 +2,15 @@ using System;
 
 class Program
 {
+    // Created rules to not duplicate the reflection questions in the same session.
+    // Removed the questions after they were asked.
+    // Added a duration between 10-90 seconds.
+    // Added a prompt requesting a valid number if anything besides 1-4.
     static void Main(string[] args)
     {
         string choice = "";
 
-        while (choice !="4")
+        while (choice != "4")
         {
             Console.Clear();
 
