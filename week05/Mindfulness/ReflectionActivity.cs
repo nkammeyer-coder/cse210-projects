@@ -1,6 +1,6 @@
 public class ReflectionActivity : Activity
 {
-    // Created rules to not duplicate the questions in the same session.
+    
     private List<string> _prompts;
     private List<string> _questions;
     private Random _random = new Random();
