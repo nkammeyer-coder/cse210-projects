@@ -18,4 +18,9 @@ public class SimpleGoal : Goal
     {
         return $"SimpleGoal:{GetShortName()}|{GetDescription()}|{GetPoints}|{_isComplete}";
     }
+    public override int RecordEvent()
+    {
+        _isComplete = true;
+        return GetPoints();
+    }
 }
