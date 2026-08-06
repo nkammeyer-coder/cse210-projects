@@ -177,6 +177,12 @@ public class GoalManager
 
         int index = goalNumber - 1;
 
+        if (_goals[index].IsComplete())
+        {
+            Console.WriteLine("That goal has already been completed.");
+            return;
+        }
+
         int pointsEarned = _goals[index].RecordEvent();
 
         _score += pointsEarned;
@@ -232,12 +238,14 @@ public class GoalManager
             if (goalType == "SimpleGoal")
             {
                 bool isComplete = bool.Parse(details[3]);
+                string completionDate = details [4];
 
                 SimpleGoal goal = new SimpleGoal(
                     shortName,
                     description,
                     points,
-                    isComplete
+                    isComplete,
+                    completionDate
                 );
 
                 _goals.Add(goal);
@@ -257,6 +265,7 @@ public class GoalManager
                 int bonus = int.Parse(details[3]);
                 int target = int.Parse(details[4]);
                 int amountCompleted = int.Parse(details[5]);
+                string completionDate = details [6];
 
                 ChecklistGoal goal = new ChecklistGoal(
                     shortName,
@@ -264,7 +273,8 @@ public class GoalManager
                     points,
                     target,
                     bonus,
-                    amountCompleted
+                    amountCompleted,
+                    completionDate
                 );
 
                 _goals.Add(goal);

@@ -16,5 +16,4 @@ public class EternalGoal : Goal
     {
         return $"EternalGoal:{GetShortName()}|{GetDescription()}|{GetPoints()}";
     }
-   
 }
