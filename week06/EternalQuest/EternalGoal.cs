@@ -4,9 +4,9 @@ public class EternalGoal : Goal
     {
         
     }
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
-        // no value to change or add.  points are earned each time as it never completes.
+        return GetPoints();
     }
     public override bool IsComplete()
     {
@@ -16,4 +16,5 @@ public class EternalGoal : Goal
     {
         return $"EternalGoal:{GetShortName()}|{GetDescription()}|{GetPoints()}";
     }
+   
 }
